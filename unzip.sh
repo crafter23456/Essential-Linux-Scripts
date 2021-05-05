@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /backup
+cd /backup # where the backups are located
 echo -e "\n---------------------------------------------------------------------------------\n"
 echo -e "What Backup you want to unzip ?\n"
 
