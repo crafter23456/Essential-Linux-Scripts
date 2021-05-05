@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /backup
+cd /backup # location of the backups
 echo -e "\n---------------------------------------------------------------------------------\n"
 echo -e "What folder do you wanna delete ?\n"
 
