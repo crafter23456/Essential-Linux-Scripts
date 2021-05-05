@@ -1,5 +1,7 @@
 #!/bin/bash
 
+loc=/root # location of the scripts
+
 echo -e "\n---------------------------------------------------------------------------------\n"
 
 echo -e "What script do you wanna execlude?\n"
@@ -18,23 +20,23 @@ while [ $CASE -ne 0 ]; do
 	
 	case $TYPE_INT in
         "1")
-		cd /home && ./paper.sh
+		cd $loc && ./paper.sh
 CASE=0
             ;;
         "2")
-		cd /home && ./copy.sh
+		cd $loc && ./copy.sh
 CASE=0
             ;;
         "3")
-		cd /home && ./unzip.sh
+		cd $loc && ./unzip.sh
 CASE=0
             ;;
 	"4")
-		cd /home && ./dump.sh
+		cd $loc && ./dump.sh
 CASE=0
             ;;
 	"5")
-		cd /home && ./delete.sh
+		cd $loc && ./delete.sh
 CASE=0
             ;;
         "6")
