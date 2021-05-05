@@ -1,7 +1,7 @@
 #!/bin/bash
-folder=/home/Test
-desdir=/home/CB
-cd $folder #add a folder to patch the paperclip
+folder=/home/Test # add a folder to patch the paperclip
+desdir=/home/CB # where the patched paperclip should be replaced
+cd $folder 
 echo "Downloading Paper.jar..."
 wget -N https://papermc.io/api/v1/paper/1.16.5/latest/download -O paperclip.jar
 echo "Finished getting paperclip.jar..."
