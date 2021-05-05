@@ -5,11 +5,10 @@ echo -e "\n---------------------------------------------------------------------
 echo -e "What script do you wanna execlude?\n"
 echo "[1] PAPER PATCH"
 echo "[2] MOVE FILES"
-echo "[3] COPY CITY"
-echo "[4] UNZIP"
-echo "[5] DUMP DATABASE"
-echo "[6] DELETE DICTIONARIES"
-echo "[7] QUIT"
+echo "[3] UNZIP"
+echo "[4] DUMP DATABASE"
+echo "[5] DELETE DICTIONARIES"
+echo "[6] QUIT"
 
 echo ""
 
@@ -23,26 +22,22 @@ while [ $CASE -ne 0 ]; do
 CASE=0
             ;;
         "2")
-		cd /home && ./score.sh
-CASE=0
-            ;;
-        "3")
 		cd /home && ./copy.sh
 CASE=0
             ;;
-        "4")
+        "3")
 		cd /home && ./unzip.sh
 CASE=0
             ;;
-		"5")
+	"4")
 		cd /home && ./dump.sh
 CASE=0
             ;;
-		"6")
+	"5")
 		cd /home && ./delete.sh
 CASE=0
             ;;
-        "7")
+        "6")
             break
 			CASE=0
             ;;
