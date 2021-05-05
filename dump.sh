@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /backup
+cd /backup # add location of the database backups
 echo -e "\n---------------------------------------------------------------------------------\n"
 echo -e "What database you want to dump?\n"
 
