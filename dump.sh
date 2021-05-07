@@ -56,10 +56,10 @@ read -r -p "Please insert 'YES' to allow the installation. Otherwise this script
 if [ "$ANSWER" == "YES" ] || [ "$ANSWER" == "y" ]; then
 	if [ $database == "all" ]; then
 		echo "Dumping all database..."
-		mysql -p -o $database < ${file[$input]}
+		mysql -p < ${file[$input]}
 	else
 		echo "Dumping database..."
-		mysql -p < ${file[$input]}
+		mysql -p -o $database < ${file[$input]}
 	fi
 else
 	echo "Your answer was \"$ANSWER\" and not YES. So this script will exit now."
