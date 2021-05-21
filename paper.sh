@@ -3,7 +3,9 @@ folder=/home/Test # add a folder to patch the paperclip
 desdir=/home/CB # where the patched paperclip should be replaced
 cd $folder 
 echo "Downloading Paper.jar..."
-wget -N https://papermc.io/api/v1/paper/1.16.5/latest/download -O paperclip.jar
+version=$(curl -sN https://papermc.io/api/v2/projects/paper | jq -r '.version_groups[-1]')
+build=$(curl -sN https://papermc.io/api/v2/projects/paper/versions/1.16.5 | jq -r '.builds[-1]')
+wget -N https://papermc.io/api/v2/projects/paper/versions/$version/builds/$build/downloads/paper-$version-$build.jar -O paperclip.jar
 echo "Finished getting paperclip.jar..."
 cd $folder
 screen -L -A -m -d -S minecraft java -Xms2G -Xmx2G -jar paperclip.jar nogui
