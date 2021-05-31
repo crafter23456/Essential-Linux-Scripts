@@ -8,10 +8,7 @@ build=$(curl -sN https://papermc.io/api/v2/projects/paper/versions/1.16.5 | jq -
 wget -N https://papermc.io/api/v2/projects/paper/versions/$version/builds/$build/downloads/paper-$version-$build.jar -O paperclip.jar
 echo "Finished getting paperclip.jar..."
 cd $folder
-screen -L -A -m -d -S minecraft java -Xms2G -Xmx2G -jar paperclip.jar nogui
-echo "Starting MC Server..."
-sleep 5
-screen -S minecraft -X stuff $'stop\n'
+java -Dpaperclip.patchonly=true -jar paperclip.jar
 cd $folder/cache
 echo "Renaming paper-433.jar..."
 mv patched_1.16.5.jar paper-433.jar
